@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.ItemMapper">
+
+    <select id="findAll" resultType="item">
+        select * from item;
+    </select>
+
+    <!--修改商品前,先查询商品信息-->
+    <select id="editItemById" resultType="item">
+        SELECT * FROM item where id=#{ad}
+    </select>
+
+    <!--修改商品的详情-->
+    <update id="updateItem" parameterType="item">
+        UPDATE  item set name=#{name}, price=#{price} ,detail=#{detail} where id=#{id}
+    </update>
+
+    <!--条件查询-->
+    <select id="queryItem" resultType="item">
+        select * from item
+        <where>
+            <if test="item.name !=null and item.name !='0' ">
+                AND name like '%'#{item.name}'%'
+            </if>
+            <if test="item.price !=null and item.price !=0 ">
+                and price=#{item.price}
+            </if>
+        </where>
+    </select>
+</mapper>
