@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+   <!-- 3)applicationContext-dao.xml
+        1.引入外部数据源  加载db.properties
+        2.配置默认的连接池  DriverManagerDataSource
+        3.配置工厂对象  SqlSessionFactoryBean
+        注入数据源
+        加载SqlMapper.xml
+        配置别名
+        4.配置MapperScannerConfigurar
+        包扫描: 创建Mapper接口的代理对象,加载映射文件-->
+
+    <!--1.引入外部数据源  加载db.properties-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!--配置工厂对象-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
+        <property name="typeAliasesPackage" value="com.itheima.pojo"/>
+    </bean>
+
+    <!--创建mapper接口的代理对象-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.itheima.mapper"/>
+    </bean>
+
+<!--
+    &lt;!&ndash;2.配置默认的连接池  DriverManagerDataSource&ndash;&gt;
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+  &lt;!&ndash;  3.配置工厂对象  SqlSessionFactoryBean
+    注入数据源
+    加载SqlMapper.xml
+    配置别名&ndash;&gt;
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        &lt;!&ndash;注入数据源&ndash;&gt;
+        <property name="dataSource" ref="dataSource"/>
+        &lt;!&ndash;加载SqlMapper.xml&ndash;&gt;
+        <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
+        &lt;!&ndash;配置别名&ndash;&gt;
+        <property name="typeAliasesPackage" value="com.itheima.pojo"/>
+    </bean>
+
+    &lt;!&ndash;4.配置MapperScannerConfigurar
+    包扫描: 创建Mapper接口的代理对象,加载映射文件&ndash;&gt;
+    <bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.itheima.mapper"/>
+    </bean>-->
+</beans>

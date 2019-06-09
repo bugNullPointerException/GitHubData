@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--1.包扫描-->
+    <context:component-scan base-package="com.itheima.controller"/>
+
+    <!--2.三大组件:  注解驱动(处理器映射器, 处理器适配器)  视图解析器(前缀 后缀)-->
+    <!--在注解驱动中挂载conversionService转换器-->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+
+    <!--配置转换器-->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.itheima.converter.DateConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+      <!--  <mvc:interceptor>
+            &lt;!&ndash;设置所有的请求都进入拦截器&ndash;&gt;
+            <mvc:mapping path="/**"/>
+            &lt;!&ndash;配置具体的拦截器对象&ndash;&gt;
+            <bean class="com.itheima.interceptor.MyInterceptor"/>
+        </mvc:interceptor>
+        &lt;!&ndash;配置其他的拦截器&ndash;&gt;
+        <mvc:interceptor>
+            &lt;!&ndash;设置所有的请求都进入拦截器&ndash;&gt;
+            <mvc:mapping path="/**"/>
+            &lt;!&ndash;配置具体的拦截器对象&ndash;&gt;
+            <bean class="com.itheima.interceptor.MyInterceptor2"/>
+        </mvc:interceptor>-->
+
+        <mvc:interceptor>
+            <!--设置所有的请求都进入拦截器-->
+            <mvc:mapping path="/**"/>
+            <!--配置具体的拦截器对象-->
+            <bean class="com.itheima.interceptor.UserInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+
+</beans>
