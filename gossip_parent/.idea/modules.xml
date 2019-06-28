@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gossip_cache_service/gossip_cache_service.iml" filepath="$PROJECT_DIR$/gossip_cache_service/gossip_cache_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gossip_parent.iml" filepath="$PROJECT_DIR$/gossip_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gossip_pojo/gossip_pojo.iml" filepath="$PROJECT_DIR$/gossip_pojo/gossip_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gossip_searchPortal/gossip_searchPortal.iml" filepath="$PROJECT_DIR$/gossip_searchPortal/gossip_searchPortal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gossip_search_interface/gossip_search_interface.iml" filepath="$PROJECT_DIR$/gossip_search_interface/gossip_search_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gossip_search_service/gossip_search_service.iml" filepath="$PROJECT_DIR$/gossip_search_service/gossip_search_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gossip_storm/gossip_storm.iml" filepath="$PROJECT_DIR$/gossip_storm/gossip_storm.iml" />
+    </modules>
+  </component>
+</project>

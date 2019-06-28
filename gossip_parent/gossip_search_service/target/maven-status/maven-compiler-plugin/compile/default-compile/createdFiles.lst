@@ -1,0 +1,3 @@
+com\itheima\search\service\impl\SolrIndexSearcher.class
+com\itheima\search\service\impl\IndexWriterImpl.class
+com\itheima\search\service\listener\SpiderKafkaConsumer.class

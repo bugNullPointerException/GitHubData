@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                           http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--solr集群的配置-->
+    <bean class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+        <constructor-arg name="zkHost"
+                         value="192.168.72.101:2181,192.168.72.102:2181,192.168.72.103:2181"></constructor-arg>
+        <property name="defaultCollection" value="collection1"></property>
+        <property name="zkClientTimeout" value="50000"></property>
+        <property name="zkConnectTimeout" value="50000"></property>
+    </bean>
+
+    <!--创建jedis连接对象-->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="30"/><!--最大连接数 -->
+        <property name="maxIdle" value="10"/><!--最大空闲连接数 -->
+        <property name="maxWaitMillis" value="15000"/><!--获取连接时最大等待毫秒数-->
+        <property name="testOnBorrow" value="true"/><!--在获取连接时检查连接有效性-->
+    </bean>
+    <bean id = "jedisPool" class="redis.clients.jedis.JedisPool" scope="singleton">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1" value="192.168.72.102" type="java.lang.String"/>
+        <constructor-arg index="2" value="6379" type="int"/>
+    </bean>
+
+    <!--dubbox相关配置-->
+    <!-- 本工程并不需要发布服务到注册中心供其他服务，这里只需要扫面@reference注解，调用索引查询服务 -->
+    <!--<dubbo:protocol name="dubbo" port="20883"></dubbo:protocol>-->
+    <dubbo:application name="gossip_cache_service"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.72.101:2181,192.168.72.102:2181,192.168.72.103:2181"/>
+    <!--修改好包扫描路径，扫面@reference注解-->
+    <dubbo:annotation package="com.itheima.cache"/>
+</beans>	

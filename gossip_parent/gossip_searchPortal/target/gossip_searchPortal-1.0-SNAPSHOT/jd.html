@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lua发送请求演示的页面</title>
+</head>
+<body>
+<h1>采集用户点击标签行为</h1>
+
+<h2>功能:</h2>
+<ol>
+  <li>url参数回传</li>
+  <li>cookie回传</li>
+  <li>点击回传</li>
+  <li>处理冒泡排除</li>
+  <li>处理页面跳转</li>
+</ol>
+
+<h2>回传参数:</h2>
+<div id="output"></div>
+
+<h2>点击测试:</h2>
+
+<div clstag="homepage|keycount|home2013|08a" class="placeholder">有 clstag</div>
+<div class="placeholder">无 clstag</div>
+<button clstag="homepage|keycount|home2013|08g" class="placeholder" onclick="btnClick2(event)">button 按钮</button>
+<input type="button" clstag="homepage|keycount|home2013|08f" class="placeholder" onclick="btnClick2(event)" value="input 按钮" />
+<button clstag="homepage|keycount|home2013|08b" class="placeholder" onclick="btnClick(event)">button 按钮 阻止冒泡</button>
+<input type="button" clstag="homepage|keycount|home2013|08c" class="placeholder" onclick="btnClick(event)" value="input 按钮 阻止冒泡" />
+<a clstag="homepage|keycount|home2013|08d" class="placeholder" href="http://www.baidu.com">链接 跳转捕获</a>
+<a clstag="homepage|keycount|home2013|08e" class="placeholder" href="http://www.baidu.com" target="_blank">链接 target 捕获</a>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+  var jaq = jaq || [];
+  jaq.push(['account', '_ACCOUNT_']);
+  jaq.push(['domain', '_DOMAIN_']);
+  (function () {
+    var ja = document.createElement('script'); ja.type = 'text/javascript'; ja.async = true;
+    ja.src = 'js/watch.js'
+    // ja.src = ('https:' == document.location.protocol ? 'https://cscssl' : 'http://csc') + '.jd.com/joya.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ja, s);
+  })();
+</script>
+
+<script type="text/javascript">
+  function btnClick(e) {
+    // console.log('按钮点击')
+    e.stopPropagation()
+  }
+  function btnClick2(e) {
+    // console.log('按钮点击')
+  }
+</script>
+<style>
+  .placeholder {
+    width: 200px;
+    height: 50px;
+    background-color: bisque;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px;
+    display: inline-block;
+  }
+</style>
+</html>

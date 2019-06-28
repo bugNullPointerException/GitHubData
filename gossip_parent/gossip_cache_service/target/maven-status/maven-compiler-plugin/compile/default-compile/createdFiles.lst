@@ -1,0 +1,3 @@
+com\itheima\cache\service\NewsCachService.class
+com\itheima\cache\service\impl\NewsCachServiceImpl.class
+com\itheima\cache\service\listener\KeywordsConsumer.class

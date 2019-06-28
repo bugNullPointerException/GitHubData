@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gossip_searchPortal:war">
+    <output-path>$PROJECT_DIR$/gossip_searchPortal/target</output-path>
+    <root id="archive" name="gossip_searchPortal-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gossip_searchPortal:war exploded" />
+    </root>
+  </artifact>
+</component>

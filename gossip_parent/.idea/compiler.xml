@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gossip_cache_service" />
+        <module name="gossip_pojo" />
+        <module name="gossip_search_interface" />
+        <module name="gossip_search_service" />
+        <module name="gossip_searchPortal" />
+        <module name="gossip_storm" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gossip_cache_service" target="1.8" />
+      <module name="gossip_parent" target="1.8" />
+      <module name="gossip_pojo" target="1.8" />
+      <module name="gossip_search_interface" target="1.8" />
+      <module name="gossip_search_service" target="1.8" />
+      <module name="gossip_searchPortal" target="1.8" />
+      <module name="gossip_storm" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
