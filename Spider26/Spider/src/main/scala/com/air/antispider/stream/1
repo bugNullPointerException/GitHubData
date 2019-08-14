@@ -1,0 +1,11 @@
+ProcessedData(,POST,/B2C40/query/jaxb/direct/query.ao,192.168.80.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36,2019-08-06T11:55:39+08:00,192.168.80.81,false,RequestType(National,Query),OneWay,CoreRequestParams(20180220,CAN,WUH),782121159357B98CA6112554CF44321E,D1279C812D20ABDB6612BA7AF1C5D13C,Some(com.air.antispider.stream.common.bean.QueryRequestData@55546aa8),Some(com.air.antispider.stream.common.bean.BookRequestData@33d7694b),http://b2c.csair.com/B2C40/modules/bookingnew/main/flightSelectDirect.html?t=S&c1=CAN&c2=WUH&d1=2019-08-06&at=1&ct=0&it=0)
+
+
+
+ProcessedData(,POST,/B2C40/query/jaxb/direct/query.ao,192.168.80.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36,2019-08-06T11:55:39+08:00,192.168.80.81,false,RequestType(National,Query),OneWay,CoreRequestParams(20180220,CAN,WUH),782121159357B98CA6112554CF44321E,D1279C812D20ABDB6612BA7AF1C5D13C,Some(com.air.antispider.stream.common.bean.QueryRequestData@43d945d2),Some(com.air.antispider.stream.common.bean.BookRequestData@3f199057),http://b2c.csair.com/B2C40/modules/bookingnew/main/flightSelectDirect.html?t=S&c1=CAN&c2=WUH&d1=2019-08-06&at=1&ct=0&it=0)
+
+
+
+
+
+NULL#CS#POST#CS#/B2C40/query/jaxb/direct/query.ao#CS#192.168.80.1#CS#Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36#CS#2019-08-06T15:34:21+08:00#CS#192.168.80.81#CS#false#CS#National#CS#Query#CS#OneWay#CS#20180220#CS#CAN#CS#WUH#CS#782121159357B98CA6112554CF44321E#CS#D1279C812D20ABDB6612BA7AF1C5D13C#CS#{"isEmpty":false,"flightType":0,"queryTime":"","queryUserId":"","queryUnUserId":"","queryIp":"","depCity":"CAN","arrCity":"WUH","flightDate":"20180220","adultNum":"1","childNum":"0","infantNum":"0","country":"","travelType":0}#CS#{"flightType":-1,"travelType":-1,"bookTime":"","bookUserId":"","bookUnUserId":"","bookIp":"","psgName":[],"psgType":[],"idType":[],"idCard":[],"contractName":"","contractPhone":"D41D8CD98F00B204E9800998ECF8427E","bookAgent":"","depCity":[],"arrCity":[],"flightDate":[],"flightNo":[],"cabin":[]}#CS#http://b2c.csair.com/B2C40/modules/bookingnew/main/flightSelectDirect.html?t=S&c1=CAN&c2=WUH&d1=2019-08-06&at=1&ct=0&it=0

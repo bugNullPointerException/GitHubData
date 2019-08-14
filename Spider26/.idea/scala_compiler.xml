@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="Maven 1" modules="Spider">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="C:\My_Data\IDEA_WorkSpace\Spider26\Spider\target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 2" modules="Offline">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="C:\My_Data\IDEA_WorkSpace\Spider26\Offline\target/.scala_dependencies" />
+      </parameters>
+    </profile>
+  </component>
+</project>

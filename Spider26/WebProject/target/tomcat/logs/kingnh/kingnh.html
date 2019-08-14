@@ -1,0 +1,1573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Sat Aug 03 08:46:14 CST 2019<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>66539182</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketException: Software caused connection abort: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539197</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539199</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539205</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539207</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539211</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539215</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539219</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539222</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539227</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539229</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539234</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539236</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539241</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539244</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539248</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539250</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539256</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539258</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539263</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539265</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539271</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539273</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539280</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539283</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539286</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539289</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539293</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539295</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539297</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
+
+<tr>
+<td>66539303</td>
+<td title="Druid-ConnectionPool-Create-1708443362 thread">Druid-ConnectionPool-Create-1708443362</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.alibaba.druid.pool.DruidDataSource category">com.alibaba.druid.pool.DruidDataSource</td>
+<td title="Message">create connection error, url: jdbc:mysql://192.168.80.81:3306/gciantispider?useUnicode=true&amp;characterEncoding=UTF-8</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor62.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:357)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2482)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.GeneratedConstructorAccessor63.newInstance(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1881)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.NoRouteToHostException: No route to host: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:538)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:434)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.&lt;init&gt;(Socket.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 17 more
+</td></tr>
